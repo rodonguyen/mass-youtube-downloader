@@ -6,7 +6,7 @@ newday_playlist = "https://www.youtube.com/playlist?list=PLqOHj6mtp1CKMkoQ50hm-S
 
 
 # os.system(f"youtube-dl -x --audio-format mp3 --playlist-start 1 --playlist-end 80  {newday_playlist}")
-os.system(f"youtube-dl -x --audio-format mp3 --retries 10 --ignore-errors --playlist-start 396  {newday_playlist}")
+# os.system(f"youtube-dl -x --audio-format mp3 --retries 10 --ignore-errors --playlist-start 396  {newday_playlist}")
 # os.system(f"youtube-dl -x --audio-format mp3 --yes-playlist --get-duration   https://www.youtube.com/playlist?list=PLqOHj6mtp1CKQfXFRvi-FK__vkveQMrt1")
 
 

@@ -21,7 +21,7 @@ With **Mass Youtube Downloader**, you can:
 
 1. Paste the link of the video you want to download
 1. Choose either audio/video
-1. Click Download. This will create a thread and start downloading. You can view the progress in the command. You can also download another file if you wish to and all your downloading will run parallelly.
+1. Click Download. This will create a thread and start downloading. You can view the progress in the command. You can also download another file if you wish to and all your downloadings will run synchronously.
 
 
 ## Further development

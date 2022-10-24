@@ -23,6 +23,9 @@ With **Mass Youtube Downloader**, you can:
 1. Choose either audio/video
 1. Click Download. This will create a thread and start downloading. You can view the progress in the command. You can also download another file if you wish to and all your downloadings will run synchronously.
 
+## Notes:
+- The installation instructions has not been tested on different devices so errors are likely to occur
+- Suitable for downloading single file. The app hasn't had error handler during downloading a large playlist and as a result, it may miss some files.
 
 ## Further development
 - Migrate to PyQt5

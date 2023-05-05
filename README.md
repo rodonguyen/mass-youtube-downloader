@@ -4,7 +4,18 @@ With **Mass Youtube Downloader**, you can:
 - **Mass** download from a playlist
 - Filter your download by durations of the videos (in development)
 
-## Instructions
+## Getting started
+### Install These Required Packages: 
+- [download_dl](http://ytdl-org.github.io/youtube-dl/download.html) (their [GitHub repo](https://github.com/ytdl-org/youtube-dl))
+- ffmpeg
+
+### Install required packages for Window
+- Open "Power Shell" app as Admin
+- Install Choco package manager/installer: `Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))`
+- Install 2 required packages: `choco install ffmpeg youtube-dl`
+
+### Run the app
+
 1. Download the app
     ```bash
     git clone https://github.com/rodonguyen/mass-youtube-downloader 
@@ -12,6 +23,10 @@ With **Mass Youtube Downloader**, you can:
     ```
 
 2. In the app directory, enter this command  to run the app:  
+    ```
+    python3 app.py
+    ```
+    Or using the pre-build
     ```bash
     ./dist/app
     ```
@@ -32,22 +47,6 @@ With **Mass Youtube Downloader**, you can:
 
 <br>
 
-## To get started
-### Package required: 
-- [download_dl](http://ytdl-org.github.io/youtube-dl/download.html) (their [GitHub repo](https://github.com/ytdl-org/youtube-dl))
-- ffmpeg
-
-### For Window
-- Open "Power Shell" app as Admin
-- Install Choco package manager/installer: `Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))`
-- Install 2 required packages: `choco install ffmpeg youtube-dl`
-
-
-## Others
-### Generate an executable file
-1. Generate: `pyinstaller --onefile app.py`
-1. Execute that file:  `./dist/app`
-
 
 ## Troubleshoot
 
@@ -62,3 +61,17 @@ In any pip commands it's recommended to use `python3 -m pip` instead of just pip
 
 To avoid requiring git, use the zip download offered from the "<> Code>Download ZIP" pull-down on the main page, but changing the extension to .tar.gz.
 
+
+## Others
+
+### Generate an executable file
+1. Generate: `pyinstaller --onefile app.py`
+1. Execute that file:  `./dist/app`
+
+### Convert file format
+
+As you already installed `ffmpeg` package, convert file to a different format is extremely easy. This is an example converting `.webm` to `.mp3`:
+
+```
+ffmpeg -y -loglevel repeat+info -i 'file:some_music_video.webm' -vn -acodec libmp3lame -q:a 5 'file:some_music_video.mp3'
+```

@@ -19,7 +19,7 @@ def download():
     # format = "-f 'mp4[filesize<10M]+bestaudio/bestvideo[filesize<50M]+bestaudio'" 
     format = "-f 'mp4+bestaudio/bestvideo+bestaudio'" 
 
-  full_command = f"youtube-dl {format} --retries 10 --ignore-errors {url}"
+  full_command = f"youtube-dl {format} --retries 10 --ignore-errors {url} --verbose"
 
   print(full_command)
   os.system(full_command)

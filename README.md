@@ -49,4 +49,16 @@ With **Mass Youtube Downloader**, you can:
 1. Execute that file:  `./dist/app`
 
 
+## Troubleshoot
+
+
+[GitHub comment](https://github.com/ytdl-org/youtube-dl/issues/31530#issuecomment-1435477247): You may need to add `--force-reinstall` since pip can't tell that this is a new version. For instance, @paulrougieux recommends this:
+
+```
+pip install --upgrade --force-reinstall "git+https://github.com/ytdl-org/youtube-dl.git"
+```
+
+In any pip commands it's recommended to use `python3 -m pip` instead of just pip, where python is the name of the Python that you want or expect to run yt-dl, say python3.9.
+
+To avoid requiring git, use the zip download offered from the "<> Code>Download ZIP" pull-down on the main page, but changing the extension to .tar.gz.
 
